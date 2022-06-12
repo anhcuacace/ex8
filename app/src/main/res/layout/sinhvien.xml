@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/icon"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,68 +17,96 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_marginBottom="5dp"
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tên: "
-        android:textSize="20sp"
+        android:layout_marginStart="2dp"v
         android:layout_toRightOf="@id/img_user"
+        android:text="Tên: "
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        app:layout_constraintStart_toEndOf="@+id/img_user"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_marginBottom="5dp"
         android:id="@+id/names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_toRightOf="@id/name"
-        android:textSize="20sp"
+        android:text="tesdsf"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_marginBottom="5dp"
         android:id="@+id/address"
+
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:layout_below="@id/name"
+
         android:layout_toRightOf="@id/img_user"
         android:text="Địa chỉ:"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintStart_toEndOf="@+id/img_user"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+
     <TextView
         android:id="@+id/addresss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/address"
         android:layout_below="@id/name"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
+        android:layout_toRightOf="@id/address"
+        android:text="text"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/phones"
+        app:layout_constraintStart_toEndOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@+id/names" />
+
     <TextView
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_user"
+
         android:layout_toRightOf="@id/img_user"
-        android:layout_below="@id/address"
         android:text="Số điện thoại:"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_user" />
+
     <TextView
         android:id="@+id/phones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/phone"
         android:layout_below="@id/address"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
+        android:layout_alignBottom="@id/img_user"
 
-<ImageButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/img_1"
-    android:layout_alignBottom="@id/img_user"
-    android:layout_alignParentRight="true"/>
+        android:text="text"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone"
+         />
+
+    <ImageButton
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_alignBottom="@id/img_user"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
